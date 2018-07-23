@@ -1,6 +1,6 @@
-export class PersonRepository {
+export class UserRepository {
 
-    getPersons () {
+    getUsers () {
         return [
             {name : "John Doe"},
             {name : "Charlie Chaplin"}

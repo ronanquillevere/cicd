@@ -12,15 +12,17 @@ export class RestService {
         return fetch(this._buildGetUsersRequest());
     }
 
-    _buildGetUsersRequest(){
-        const reqParams = {
+    _buildGetUsersParams(){
+        return {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
         };
+    }
 
-        return new Request(USERS_PATH, reqParams);
+    _buildGetUsersRequest(){
+        return new Request(USERS_PATH, this._buildGetUsersParams());
     }
 
 }

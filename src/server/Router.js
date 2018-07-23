@@ -11,9 +11,9 @@ export class Router {
         this.xpApp.use(this.express.static(staticPath));
     }
 
-    bindUsers(personRepository){
+    bindUsers(userRepository){
         this.xpApp.get(ROUTE.USERS, (req, res) => {
-            res.json(personRepository.getPersons());
+            res.json(userRepository.getUsers());
         });
     }
 
