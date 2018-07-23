@@ -1,0 +1,8 @@
+dist/**
+npm-debug.log
+/dist
+/static/frontend.*
+/node_modules
+/.nyc_output
+/coverage
+/node

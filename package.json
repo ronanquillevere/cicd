@@ -1,0 +1,19 @@
+{
+  "name": "cicd",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm run _buildBackend && npm run _buildFrontend && npm run _startLocal",
+    "_startLocal": "node ./src/server/Main.js",
+    "_buildBackend": "rollup -c ./rollup.backend.prod.js",
+    "_buildFrontend": "rollup -c ./rollup.frontend.prod.js"
+  },
+  "dependencies": {
+    "express": "~4.16.0"
+  },
+  "devDependencies": {
+    "rollup": "^0.63.4",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-uglify-es": "0.0.1"
+  }
+}
