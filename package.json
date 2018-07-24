@@ -10,7 +10,8 @@
     "test": "npm run _transpileTest && mocha",
     "_transpileTest": "npm run _transpileFrontendTest && npm run _transpileBackendTest",
     "_transpileFrontendTest": "rollup -c ./rollup.frontend.test.js",
-    "_transpileBackendTest": "rollup -c ./rollup.backend.test.js"
+    "_transpileBackendTest": "rollup -c ./rollup.backend.test.js",
+    "dockerize": "docker build -t rquillevere/cicd ."
   },
   "dependencies": {
     "express": "~4.16.0",
